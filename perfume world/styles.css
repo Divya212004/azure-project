@@ -4,13 +4,17 @@ body {
     padding: 0;
     background-color:white;
     background-image: url(bg.jpg);
-    opacity: 0.7%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed; /* Optional: keeps the background fixed on scroll */
     margin: 0;
     padding: 0;
+}
+.heading{
+    text-align: center;
+    margin-top: 200px;
+    font-size: 25px;
 
 }
 
