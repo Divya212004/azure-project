@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - E-commerce Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>𝓞𝓤𝓡 𝓟𝓡𝓞𝓓𝓤𝓒𝓣</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </header>
+    <main>
+        <div class="product">
+            <a href="#" onclick="loadBuyPage('buy.html'); return false;"><img src="img01.jpg" alt="Product 1"></a>
+            <h3><a href="Buy.html">BUY NOW</a></h3>
+            <p>$100.00</p>
+        </div>
+        <div class="product">
+            <a href="#" onclick="loadBuyPage('buy2.html'); return false;"><img src="img02.jpg" alt="Product 2"></a>
+            <h3><a href="buy2.html" >BUY NOW</a></h3>
+            <p>$200.00</p>
+        </div>
+        <div class="product">
+            <a href="#" onclick="loadBuyPage('buy3.html'); return false;"><img src="img03.jpg" alt="Product 3"></a>
+            <h3><a href="buy3.html">BUY NOW</a></h3>
+            <p>$300.00</p>
+        </div>
+        <div class="product">
+            <a href="#" onclick="loadBuyPage('buy4.html'); return false;"><img src="img04.jpg" alt="Product 4"></a>
+            <h3><a href="buy4.html">BUY NOW</a></h3>
+            <p>$500.00</p>
+        </div>
+        <div class="product">
+            <a href="#" onclick="loadBuyPage('buy5.html'); return false;"><img src="img05.jpg" alt="Product 5"></a>
+            <h3><a href="buy5.html">BUY NOW</a></h3>
+            <p>$600.00</p>
+        </div>
+        <div class="product">
+            <a href="#" onclick="loadBuyPage('buy6.html'); return false;"><img src="img06.jpg" alt="Product 6"></a>
+            <h3><a href="buy6.html">BUY NOW</a></h3>
+            <p>$700.00</p>
+        </div>
+        <div class="product">
+            <a href="#" onclick="loadBuyPage('buy7.html'); return false;"><img src="img07.jpg" alt="Product 7"></a>
+            <h3><a href="buy7.html">BUY NOW</a></h3>
+            <p>$800.00</p>
+        </div>
+        <div class="product">
+            <a href="#" onclick="loadBuyPage('buy8.html'); return false;"><img src="img08.jpg" alt="Product 8"></a>
+            <h3><a href="buy8.html">BUY NOW</a></h3>
+            <p>$900.00</p>
+        </div>
+        <div class="product">
+            <a href="#" onclick="loadBuyPage('buy9.html'); return false;"><img src="img09.jpg" alt="Product 9"></a>
+            <h3><a href="buy9.html">BUY NOW</a></h3>
+            <p>$1200.00</p>
+        </div>
+        <div class="product">
+            <a href="#" onclick="loadBuyPage('buy10.html'); return false;"><img src="img10.jpg" alt="Product 10"></a>
+            <h3><a href="buy10.html">BUY NOW</a></h3>
+            <p>$1300.00</p>
+        </div>
+    </main>
+
+    <!-- Modal structure -->
+    <div id="buyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="buyPageContent"></div>
+        </div>
+    </div>
+
+    <script>
+        function loadBuyPage(url) {
+            const buyModal = document.getElementById('buyModal');
+            const buyPageContent = document.getElementById('buyPageContent');
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    buyPageContent.innerHTML = data;
+                    buyModal.style.display = 'block';
+                })
+                .catch(error => console.error('Error loading the buy page:', error));
+        }
+
+        function closeModal() {
+            const buyModal = document.getElementById('buyModal');
+            buyModal.style.display = 'none';
+        }
+
+        // Close the modal when clicking outside of it
+        window.onclick = function(event) {
+            const buyModal = document.getElementById('buyModal');
+            if (event.target == buyModal) {
+                buyModal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

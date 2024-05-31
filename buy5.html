@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Product</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="product-details">
+            <h2>Product Name</h2>
+            <img src="img05.jpg" alt="product1">
+            <p><strong>Price:</strong> $600.00</p>
+            <p><strong>Description:</strong> This is a short description of the product.
+                <br><b>Perfume ingredients include a blend of alcohol, oils, and other aromatic components. 
+                Each fragrance has a distinct smell based on how it was made and the various perfume ingredients used in it. 
+                Some ingredients in perfume may sound familiar while others appear completely foreign.</b></p>
+        </div>
+        
+        <form id="orderForm">
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Shipping Address:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+                <label for="payment-method">Payment Method:</label>
+                <select id="payment-method" name="payment_method" required>
+                    <option value="cod">Cash on Delivery</option>
+                </select>
+            </div>
+            <button type="submit">Place Order</button>
+            <div id="message"></div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Check if all fields are filled
+            const quantity = document.getElementById('quantity').value;
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const address = document.getElementById('address').value;
+            const paymentMethod = document.getElementById('payment-method').value;
+
+            if (quantity && name && email && address && paymentMethod) {
+                // Redirect to order.html if all fields are filled
+                window.location.href = 'order.html';
+            } else {
+                // Show an error message if any field is empty
+                document.getElementById('message').innerText = 'Please fill out all fields.';
+                document.getElementById('message').style.color = 'red';
+            }
+        });
+    </script>
+</body>
+</html>
