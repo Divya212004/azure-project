@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Your Wishlist</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="wishlist.html">Wishlist</a>
+        </nav>
+    </header>
+    <main id="wishlist">
+        <!-- Wishlist items will be dynamically added here -->
+    </main>
+    <script>
+        // Function to load wishlist items from local storage and display them
+        function loadWishlist() {
+            const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+            const wishlistContainer = document.getElementById('wishlist');
+            wishlistContainer.innerHTML = '';
+            wishlist.forEach(item => {
+                wishlistContainer.innerHTML += `
+                    <div class="product">
+                        <img src="${item.image}" alt="${item.name}">
+                        <h3>${item.name}</h3>
+                        <p>${item.price}</p>
+                        <button onclick="removeFromWishlist('${item.name}')">Remove from Wishlist</button>
+                    </div>
+                `;
+            });
+        }
+
+        // Function to remove item from wishlist
+        function removeFromWishlist(name) {
+            let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+            wishlist = wishlist.filter(item => item.name !== name);
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            loadWishlist();
+        }
+
+        // Load wishlist items when the page loads
+        window.onload = loadWishlist;
+    </script>
+</body>
+</html>
