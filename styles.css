@@ -107,4 +107,10 @@ button:hover {
     margin-top: 10px;
     display: none;
 }
-      
+
+.butn{
+    width: 100%;
+    padding: 10px;
+    background-color: pink;
+    color: black;
+}
