@@ -51,24 +51,29 @@ Use the search functionality to find specific perfumes.
 Take advantage of the AI service to get personalized recommendations.
 
 
-Contributing:
+## Contributing:
 We welcome contributions from the community. Please follow these steps to contribute:
 
-FORK THE REPOSITORY:
+## FORK THE REPOSITORY:
 Create a new branch (git checkout -b feature-branch).
+
 Commit your changes (git commit -m 'Add some feature').
+
 Push to the branch (git push origin feature-branch).
+
 Open a pull request
 
-License:
-This project is licensed under the MIT License - see the LICENSE file for details.
 
-Contact:
+
+## Contact:
 If you have any questions, please feel free to reach out to any of the team members.
 
 Divya R: divyalakshmi2104@gmail.com.
+
 Yogadharshini S: yogadharshini814@gmail.com.
+
 Naveen Kumar N: naveenkumarit20@gmail.com.
+
 Siva Priyan M: Sivapriyanm864@gmail.com.
 
 
