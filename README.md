@@ -1,47 +1,57 @@
-TITLE: PERFUME WORLD
+## TITLE: PERFUME WORLD
 
-TEAM MEMBERS:
+## TEAM MEMBERS:
+
 Divya R - Frontend
+
 Sivpriyan M-Backend
+
 Naveen kumar N-Cloud service Integration
+
 Yogadharshini S-Readme File Update,voice Over
 
-PROJECT DESCRIPTION:
+
+## PROJECT DESCRIPTION:
 Perfume World is a web application designed to provide users with an immersive and engaging platform to explore various perfumes. The application leverages modern web technologies and cloud services to offer a seamless user experience.
 
-TECHNOLOGIES USED:
+## TECHNOLOGIES USED:
 Frontend: HTML, CSS, JavaScript
 
 
-CLOUD SERVICES:
+## CLOUD SERVICES:
 App Service: Hosting and managing the web application.
 Monitor: Tracking the application's performance and usage.
 AI Service: Enhancing the user experience with artificial intelligence capabilities.
 
-DEMO URL : https://proud-desert-0a9fadb10.5.azurestaticapps.net/
+## DEMO URL : https://proud-desert-0a9fadb10.5.azurestaticapps.net/
 
-DEMO VIDEO URL: https://youtu.be/2cebkEr6W94?si=hYKoLE7HOIg9fFCM
+## DEMO VIDEO URL: https://youtu.be/2cebkEr6W94?si=hYKoLE7HOIg9fFCM
 
 
 NAVIGATE TO THE PROJECT DIRECTORY:
  -bash
  -Copy code
  -cd perfume-world
+ 
 INSTALL THE REQUIRED DEPENDENCIES:
  -bash
  -Copy code
  -pip install -r requirements.txt
  -Running the Application
+ 
 START THE FLASK SERVERr:
  -bash
  -Copy code
  -flask run
  -Open your web browser and go to http://127.0.0.1:5000 to view the application.
+ 
 Usage
- Explore different perfumes by navigating through the various sections of the application.
- Use the search functionality to find specific perfumes.
- Take advantage of the AI service to get personalized recommendations.
-Contributing
+Explore different perfumes by navigating through the various sections of the application.
+Use the search functionality to find specific perfumes.
+Take advantage of the AI service to get personalized recommendations.
+
+
+Contributing:
 We welcome contributions from the community. Please follow these steps to contribute:
 
 FORK THE REPOSITORY:
